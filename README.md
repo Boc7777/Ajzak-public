@@ -142,6 +142,7 @@ Podział na podstawie historii gita (`git blame` na obecnych skryptach i autorzy
 
 ## Uruchomienie
 
+- ⚠️ **W tym repo nie ma grafik ani czcionek** (szczegóły w sekcji [Prawa autorskie](#prawa-autorskie)). Projekt się otworzy i kod się skompiluje, ale sprite'y będą puste, a teksty bez czcionek.
 - Unity **2021.3.19f1** (LTS), URP 2D.
 - Otwórz folder w Unity Hub i odpal scenę `Assets/Scenes/Menu.unity` w Play Mode.
 - **Build do exe nie przejdzie bez poprawek.** Trzeba usunąć `using UnityEditor...` z 8 skryptów (opis w sekcji wyżej).
@@ -153,19 +154,20 @@ Podział na podstawie historii gita (`git blame` na obecnych skryptach i autorzy
 
 ## Prawa autorskie
 
-Uczciwie: część zawartości **nie jest nasza**.
+Uczciwie: część zawartości gry **nie jest nasza**. Dlatego to publiczne repo zawiera **tylko kod, prefaby, sceny i naszą muzykę**.
+**Wszystkie grafiki i czcionki zostały z niego usunięte.** Screeny i film powyżej pokazują grę z pełną grafiką, z naszej prywatnej kopii.
 
-| Co | Skąd | Status |
+| Co | Skąd | W tym repo |
 |---|---|---|
-| Tło menu i ekranu ładowania (`NASZE graficzki/Menu/*.png`) | Oficjalne grafiki/tapety *The Binding of Isaac* | ❌ **Nie nasze.** Do usunięcia albo podmiany przed publikacją. |
-| Nazwy i koncepcje przedmiotów, boss Duke of Flies, pokoje diabła i anioła | *The Binding of Isaac* | ⚠️ Fan-game. Mechanik nie da się opatentować prawem autorskim, ale nazwy i wygląd należą do autorów oryginału. |
-| Sprite'y przedmiotów, serduszek, Duke'a i much (`ItemsSprites`, `Health`, `Monster`) | Ręcznie rysowane przez nas na bazie Isaaca | ⚠️ Fan-art, czyli utwór zależny. Akceptowalny przy niekomercyjnym repo, ale to nie jest „czysty” oryginał. |
-| `Blackthornprod/100 Fantasy Characters Pack` (Heniek, Maciek, Robert, Świnka Pipa, Gipsis) | Paczka od Blackthornprod | ❓ Licencja niepotwierdzona. Paczki assetów zwykle pozwalają użyć ich w grze, ale **nie pozwalają redystrybuować surowych plików** w publicznym repo. |
-| `Tiny RPG Forest` | [ansimuz](https://ansimuz.itch.io/tiny-rpg-forest) | ✅ CC0 (grafika). |
-| Czcionka `alagard` | Hewett Tsoi | ✅ Darmowa, autor prosi o credit. |
-| Czcionka `rainyhearts` | Nieustalone | ❓ Do sprawdzenia. |
-| Muzyka (`muzaDoMenu.mp3`, `muzadogiery.flac`) | Nieustalone | ❓ Jeśli to soundtrack Isaaca, to ❌. |
-| [NavMeshPlus](https://github.com/h8man/NavMeshPlus) | h8man | ✅ MIT (licencja w folderze). |
-| TextMesh Pro, przykłady URP | Unity | ✅ Pakiety Unity. |
+| Kod C# | Nasz | ✅ Jest. |
+| Muzyka i dźwięki (`Assets/audio`) | Nasze, zrobione samodzielnie | ✅ Jest. |
+| Nazwy i koncepcje przedmiotów, boss Duke of Flies, pokoje diabła i anioła | *The Binding of Isaac* | ⚠️ Zostają w kodzie (nazwy klas i skryptów). To fan-game: mechanik nie da się opatentować prawem autorskim, ale nazwy i wygląd należą do autorów oryginału. |
+| Tło menu i ekranu ładowania | Oficjalne grafiki/tapety *The Binding of Isaac* | ❌ Usunięte. |
+| Sprite'y przedmiotów, serduszek, Duke'a i much | Ręcznie rysowane przez nas na bazie Isaaca (fan-art) | ❌ Usunięte. |
+| `Blackthornprod/100 Fantasy Characters Pack` (Heniek, Maciek, Robert, Świnka Pipa, Gipsis) | Paczka od Blackthornprod | ❌ Usunięte. Licencja nie pozwala redystrybuować surowych plików. |
+| `Tiny RPG Forest` | [ansimuz](https://ansimuz.itch.io/tiny-rpg-forest) | ❌ Usunięte razem z resztą grafik (CC0, do pobrania u autora). |
+| Czcionki `alagard` (Hewett Tsoi) i `rainyhearts` | Darmowe czcionki | ❌ Usunięte. |
+| [NavMeshPlus](https://github.com/h8man/NavMeshPlus) | h8man | ✅ Jest (MIT, licencja w folderze). |
+| TextMesh Pro, przykłady URP | Unity | ✅ Jest (pakiety Unity). |
 
-Kod C# jest nasz.
+*The Binding of Isaac* © Edmund McMillen / Nicalis. Ten projekt nie jest w żaden sposób powiązany z autorami oryginału.
