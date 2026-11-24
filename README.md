@@ -53,8 +53,6 @@ Zrzuty z buildu zrobionego w 2026 roku w Unity 6 (szczegóły w sekcji [Uruchomi
 
 ## Generator lochu
 
-To najciekawsza część projektu ([Boc7777](https://github.com/Boc7777)), więc ma osobną sekcję.
-
 ### Jak to działa
 
 1. **Pokój startowy** (`Destroyer.cs`) losuje, z których ścian wyrosną kolejne pokoje: `Random.Range(2, 4)`, czyli zawsze 2 albo 3 drzwi, nigdy 4. Na pozostałych ścianach włącza „Destroyery”, czyli ściany bez drzwi.
@@ -96,10 +94,7 @@ Dwa kolejne losowe piętra:
 - **Kształt pięter.** Każde piętro wygląda inaczej: raz zwarty kleks, raz długi korytarz z odnogami. Boss zawsze siedzi w ślepym zaułku najdalej od startu, a skarbiec w innym zaułku.
 - **Pokój startowy nie jest na liście `Rooms`.** Jako jedyny nie ma skryptu `AddRooms`, więc nie liczy się do `MinRooms`. Licznik „20 + start” to właśnie to.
 - **Spawnery wywołują się lawinowo.** Każdy spawner co klatkę odpala `Invoke("Spawn", 0.1f)`, więc oczekujące wywołania się piętrzą. Przy 20 pokojach nie ma to znaczenia, ale robi się z tego niepotrzebna praca.
-- **Brakujące pokoje specjalne.** W żadnym przebiegu podglądu nie pojawił się **sklep ani pokój przeklęty**, nawet po 3 minutach czekania. Start, boss i skarbiec stawiają się zawsze.
-  - Licznik `_specialRoomsToSpawn` przez to nie schodzi do zera.
-  - Ekran ładowania i blokada ruchu gracza czekają właśnie na ten licznik. To najpewniej przyczyna buga, przez który postać czasem przez minuty nie może się ruszyć.
-  - W normalnej rozgrywce sklep czasem się pojawia (widać go na filmie). Wygląda to na zależność od timingu, a do samego źródła nie doszedłem.
+- **Pierwsze piętro ma tylko bossa i skarbiec.** W scenie zapisane jest `_specialRoomsToSpawn: 1`, a `Random.Range(0, 1)` zawsze dodaje jeszcze jeden pokój. Sklep dochodzi od kolejnego piętra, bo `Trapdoor` ustawia licznik na 3.
 
 ## Kto za co odpowiadał
 
@@ -125,28 +120,9 @@ Podział na podstawie historii gita (`git blame` na obecnych skryptach i autorzy
 - **Gra nigdy nie dała się zbudować do exe.** W 8 skryptach zostały auto-importy z Visual Studio, np. `using static UnityEditor.Experimental.GraphView.GraphView;` w `player_movement.cs`. `UnityEditor` nie istnieje poza edytorem, więc build kończy się błędami kompilacji i gra działała tylko w Play Mode.
 - **`GameObject.Find` / `transform.Find("Spawnery/...")` wszędzie.** To około 650 wywołań po stringach, część w `Update()`. Wystarczy zmienić nazwę obiektu w hierarchii i gra się sypie.
 - **Generator oparty na timerach i kolizjach.** `RoomsPrefabs.Update()` co klatkę sprawdza `_timer > 1f`, `_timer > 2f`, a jak pokoi specjalnych brakuje, to po prostu robi `MinRooms++`. Wynik zależy od FPS-ów i nie ma seeda, więc nie da się odtworzyć mapy.
-- **Bugi z `Random.Range`:**
-  - `Random.Range(0, 1)` dla intów **zawsze** zwraca 0, więc „losowy” dodatkowy pokój specjalny jest zawsze.
-  - `Random.Range(0, Rooms.Count - 1)` nigdy nie wylosuje ostatniego pokoju.
 - **`PlayerHealth` (875 linii).** Serduszka trzymane są jako `int[12]` z magicznymi liczbami (`40/41/42` dla czerwonych, `51/52` dla soul…). Logika „przesuń serca w tablicy” jest skopiowana kilka razy, a `_serca[i + 1]` przy `i == 11` może wyjść poza tablicę.
-- **`arrows.cs` (520 linii) to god-object.** Każdy nowy przedmiot oznacza nowy `bool` w łzie (`Poison, Piercing, Spectral, Spider, CricketsBody, Ipecac…`), a łza sama sprawdza wszystkie efekty.
-- **Jeden przedmiot to jeden skrypt kopiuj-wklej** (`Speed`, `Tears`, `Range`, `ShootSpeed`…). Wszystkie robią `Find("Player")`, `OnTriggerEnter2D` i `stat += x`. Aż prosi się o ScriptableObject.
-- **`audioManager.PlaySound`** wypisuje `"nie znaleziono dzwieku"` do konsoli dla *każdego* dźwięku, który nie pasuje do nazwy, czyli przy prawie każdym odtworzeniu.
-- **Martwy i zakomentowany kod:**
-  - `MonsterTakeDmgOLD.cs` leży obok `MonsterTakeDmg.cs`.
-  - Jest około 300 zakomentowanych linii.
-  - Został plik `BrimTerazKurwa.cs` (już usunięty, ale historia gita pamięta).
-- **Pozostałe drobiazgi:**
-  - Mieszanka polskiego i angielskiego (`cetral`, `PermanentneDestroyery`, `Zanik`, `_serca`).
-  - Klasy z małej litery (`arrows`, `player_movement`).
-  - Literówki w nazwach (`TresureRoom`, `_spawdedCurseRoom`, `minusChanceDevilRoomBoosRoom`).
-  - Część plików ma kodowanie Windows-1250, więc polskie znaki w komentarzach się sypią.
-  - Fade ekranu ładowania (`Zanik -= 0.03f` co klatkę) zależy od FPS-ów.
-- **Ruch czasem jest zablokowany przez minuty po starcie.** Postać może strzelać, ale nie chodzi, dopóki generator nie przydzieli wszystkich pokoi specjalnych. Szczegóły w sekcji [Generator lochu](#generator-lochu).
-- **UI menu nie jest zakotwiczone.** Przy 16:9 napisy „PLAY” i „OPTIONS” wyjeżdżają poza ekran.
-- **TAB zamiast powiększać minimapę, zmniejsza ją.**
-- **W pokoju startowym leżą testowe itemy**, które ktoś zapomniał posprzątać (maska Spider-Mana, okulary 3D, soul hearts, kosa).
-- **Brak commit messages.** Commity typu `dd`, `fsd`, `dasd`, `Dof 99%` 🙃
+- **Architektura przedmiotów.** `arrows.cs` (520 linii) to god-object: każdy nowy przedmiot oznacza nowy `bool` w łzie, a łza sama sprawdza wszystkie efekty. Do tego każdy przedmiot to osobny skrypt kopiuj-wklej (`Find("Player")`, `OnTriggerEnter2D`, `stat += x`). Aż prosi się o ScriptableObject.
+- **UI menu nie jest skalowane.** Canvas jest w trybie „Constant Pixel Size”, więc przy innej rozdzielczości niż ta, w której go układano, napisy „PLAY” i „OPTIONS” wyjeżdżają poza ekran.
 
 ## Uruchomienie
 
