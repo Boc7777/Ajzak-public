@@ -138,20 +138,6 @@ Podział na podstawie historii gita (`git blame` na obecnych skryptach i autorzy
 
 ## Prawa autorskie
 
-Uczciwie: część zawartości gry **nie jest nasza**. Dlatego to publiczne repo zawiera **tylko kod, prefaby, sceny i naszą muzykę**.
-**Wszystkie grafiki i czcionki zostały z niego usunięte.** Screeny i film powyżej pokazują grę z pełną grafiką, z naszej prywatnej kopii.
+To niekomercyjny fan-game inspirowany *The Binding of Isaac* (© Edmund McMillen / Nicalis). Nie jest w żaden sposób powiązany z autorami oryginału. Nazwy przedmiotów i bossów pochodzą z oryginalnej gry.
 
-| Co | Skąd | W tym repo |
-|---|---|---|
-| Kod C# | Nasz | ✅ Jest. |
-| Muzyka i dźwięki (`Assets/audio`) | Nasze, zrobione samodzielnie | ✅ Jest. |
-| Nazwy i koncepcje przedmiotów, boss Duke of Flies, pokoje diabła i anioła | *The Binding of Isaac* | ⚠️ Zostają w kodzie (nazwy klas i skryptów). To fan-game: mechanik nie da się opatentować prawem autorskim, ale nazwy i wygląd należą do autorów oryginału. |
-| Tło menu i ekranu ładowania | Oficjalne grafiki/tapety *The Binding of Isaac* | ❌ Usunięte. |
-| Sprite'y przedmiotów, serduszek, Duke'a i much | Ręcznie rysowane przez nas na bazie Isaaca (fan-art) | ❌ Usunięte. |
-| `Blackthornprod/100 Fantasy Characters Pack` (Heniek, Maciek, Robert, Świnka Pipa, Gipsis) | Paczka od Blackthornprod | ❌ Usunięte. Licencja nie pozwala redystrybuować surowych plików. |
-| `Tiny RPG Forest` | [ansimuz](https://ansimuz.itch.io/tiny-rpg-forest) | ❌ Usunięte razem z resztą grafik (CC0, do pobrania u autora). |
-| Czcionki `alagard` (Hewett Tsoi) i `rainyhearts` | Darmowe czcionki | ❌ Usunięte. |
-| [NavMeshPlus](https://github.com/h8man/NavMeshPlus) | h8man | ✅ Jest (MIT, licencja w folderze). |
-| TextMesh Pro, przykłady URP | Unity | ✅ Jest (pakiety Unity). |
-
-*The Binding of Isaac* © Edmund McMillen / Nicalis. Ten projekt nie jest w żaden sposób powiązany z autorami oryginału.
+W repozytorium jest tylko nasz kod i nasza muzyka. Grafiki i czcionki zostały usunięte, bo część z nich nie jest nasza. Dlatego po otwarciu w Unity sprite'y są puste. Screeny i film powyżej pochodzą z naszej prywatnej kopii z pełną grafiką.
