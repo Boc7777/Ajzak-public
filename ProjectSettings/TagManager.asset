@@ -1,0 +1,94 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - rooms
+  - SpawnPoint
+  - camera
+  - roomParent
+  - central
+  - wall
+  - HitBox
+  - destroyer
+  - arrow
+  - FullHeart
+  - Rocks
+  - Undefined
+  - HalfHeart
+  - monster
+  - FullSoulHeart
+  - Key
+  - Coin
+  - Chest
+  - Bombs
+  - HalfSoulHeart
+  - LockedChest
+  - OpenedChest
+  - Brimstone
+  - Item
+  - MomsKnife
+  - Battery
+  - LockedMiniChest
+  - OpenedMiniChest
+  - container
+  - HitboxMapElement
+  - Holes
+  - Explosion
+  - LongRangeShoot
+  - StartRoom
+  - ItemsInRoom
+  - MiniMapCamera
+  - LockedStoneChest
+  - OpenedStoneChest
+  - MiniMap
+  - Bomb
+  - FootChecker
+  - MiniMapDetector
+  - ItemManager
+  - FullDarkHeart
+  - 5Coins
+  - 10Coins
+  - arrows
+  - Familiar
+  - AudioManager
+  - loadingScreen
+  - pauseMenu
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - mapelement
+  - wall
+  - MiniMapElement
+  - Player
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0

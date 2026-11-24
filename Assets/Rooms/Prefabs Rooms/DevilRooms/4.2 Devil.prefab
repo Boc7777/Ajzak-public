@@ -1,0 +1,217 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2550162533316148049
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3559944506274113964}
+  - component: {fileID: 8698587308724363365}
+  m_Layer: 0
+  m_Name: DevilItemManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3559944506274113964
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2550162533316148049}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1445621468945125706}
+  - {fileID: 3967493485385471064}
+  m_Father: {fileID: 2632648783426236103}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8698587308724363365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2550162533316148049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6b70231dbfd56344bfa0a9039e76333, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RedHeart: {fileID: 2991750187561343948, guid: e44ff1d93d2b09b41a7e069a2b18e1ff, type: 3}
+  TwoRedHearts: {fileID: 5404112816482775444, guid: b683f145ee8f04649bb05e7b3ba40ec6, type: 3}
+  ThreeSoulHearts: {fileID: 1268089376338461806, guid: b33438f5c4209424eaf32606c838f741, type: 3}
+  ItemyWPuli: []
+  _dzieciaki: []
+--- !u!1 &2632648783426236102
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2632648783426236103}
+  m_Layer: 0
+  m_Name: 4.2 Devil
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2632648783426236103
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2632648783426236102}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 53.652664, y: -23.024752, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3559944506274113964}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &5510929691772273697
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3559944506274113964}
+    m_Modifications:
+    - target: {fileID: 2052129946550842696, guid: 13cc295268951b74ab80ec28f1cfa5c9, type: 3}
+      propertyPath: m_Name
+      value: DevilRoomItemSpawner
+      objectReference: {fileID: 0}
+    - target: {fileID: 6374036351357703531, guid: 13cc295268951b74ab80ec28f1cfa5c9, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6374036351357703531, guid: 13cc295268951b74ab80ec28f1cfa5c9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6374036351357703531, guid: 13cc295268951b74ab80ec28f1cfa5c9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6374036351357703531, guid: 13cc295268951b74ab80ec28f1cfa5c9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6374036351357703531, guid: 13cc295268951b74ab80ec28f1cfa5c9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6374036351357703531, guid: 13cc295268951b74ab80ec28f1cfa5c9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6374036351357703531, guid: 13cc295268951b74ab80ec28f1cfa5c9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6374036351357703531, guid: 13cc295268951b74ab80ec28f1cfa5c9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6374036351357703531, guid: 13cc295268951b74ab80ec28f1cfa5c9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6374036351357703531, guid: 13cc295268951b74ab80ec28f1cfa5c9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6374036351357703531, guid: 13cc295268951b74ab80ec28f1cfa5c9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314696796808749107, guid: 13cc295268951b74ab80ec28f1cfa5c9, type: 3}
+      propertyPath: threeSoulHearts
+      value: 
+      objectReference: {fileID: 21300000, guid: aca0163f739f95c438889777ffa91856, type: 3}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 13cc295268951b74ab80ec28f1cfa5c9, type: 3}
+--- !u!4 &1445621468945125706 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6374036351357703531, guid: 13cc295268951b74ab80ec28f1cfa5c9, type: 3}
+  m_PrefabInstance: {fileID: 5510929691772273697}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8032871457002979635
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3559944506274113964}
+    m_Modifications:
+    - target: {fileID: 2052129946550842696, guid: 13cc295268951b74ab80ec28f1cfa5c9, type: 3}
+      propertyPath: m_Name
+      value: DevilRoomItemSpawner (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6374036351357703531, guid: 13cc295268951b74ab80ec28f1cfa5c9, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6374036351357703531, guid: 13cc295268951b74ab80ec28f1cfa5c9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6374036351357703531, guid: 13cc295268951b74ab80ec28f1cfa5c9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6374036351357703531, guid: 13cc295268951b74ab80ec28f1cfa5c9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6374036351357703531, guid: 13cc295268951b74ab80ec28f1cfa5c9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6374036351357703531, guid: 13cc295268951b74ab80ec28f1cfa5c9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6374036351357703531, guid: 13cc295268951b74ab80ec28f1cfa5c9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6374036351357703531, guid: 13cc295268951b74ab80ec28f1cfa5c9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6374036351357703531, guid: 13cc295268951b74ab80ec28f1cfa5c9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6374036351357703531, guid: 13cc295268951b74ab80ec28f1cfa5c9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6374036351357703531, guid: 13cc295268951b74ab80ec28f1cfa5c9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314696796808749107, guid: 13cc295268951b74ab80ec28f1cfa5c9, type: 3}
+      propertyPath: threeSoulHearts
+      value: 
+      objectReference: {fileID: 21300000, guid: aca0163f739f95c438889777ffa91856, type: 3}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 13cc295268951b74ab80ec28f1cfa5c9, type: 3}
+--- !u!4 &3967493485385471064 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6374036351357703531, guid: 13cc295268951b74ab80ec28f1cfa5c9, type: 3}
+  m_PrefabInstance: {fileID: 8032871457002979635}
+  m_PrefabAsset: {fileID: 0}
