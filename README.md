@@ -11,7 +11,15 @@ Wrzucamy go jako ciekawostkę z przeszłości, a nie jako przykład dobrych prak
 
 [![Gameplay: walka z Duke of Flies z Brimstone'em](docs/gameplay.gif)](docs/gameplay.mp4)
 
-▶️ **[Pełny film (mp4, ~60 s)](docs/gameplay.mp4)**: menu, pokój startowy, walka, pokój diabła z Brimstone'em, sklep i boss Duke of Flies.
+
+
+
+
+https://github.com/user-attachments/assets/6d8f120a-470c-436e-be1e-eb3fc379ea59
+
+
+
+
 
 ## Screenshoty
 
