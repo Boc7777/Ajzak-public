@@ -71,14 +71,11 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
-# Grafiki, dźwięki i fonty nie są publikowane (cudze prawa autorskie / licencje paczek)
+# Grafiki i fonty nie są publikowane (cudze prawa autorskie / licencje paczek)
 /Assets/**/*.png
 /Assets/**/*.jpg
 /Assets/**/*.jpeg
 /Assets/**/*.psd
-/Assets/**/*.mp3
-/Assets/**/*.wav
-/Assets/**/*.ogg
 /Assets/**/*.ttf
 /Assets/**/*.otf
 /Assets/NASZE graficzki/Blackthornprod/

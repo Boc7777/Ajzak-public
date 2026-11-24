@@ -22,6 +22,7 @@ Projekt fanowski / hobbystyczny, niekomercyjny.
 - Bomby, klucze, monety, skrzynie, sklep
 - System zdrowia z różnymi rodzajami serc
 - Menu główne
+- Własna muzyka i efekty dźwiękowe
 
 ## Technologie
 
@@ -38,7 +39,7 @@ Projekt fanowski / hobbystyczny, niekomercyjny.
 
 ## Uwaga o grafice
 
-Grafiki, dźwięki i fonty zostały **usunięte z tego repozytorium**, ponieważ część z nich
+Grafiki i fonty zostały **usunięte z tego repozytorium**, ponieważ część z nich
 pochodzi z *The Binding of Isaac* lub z paczek assetów, których licencje nie pozwalają na
 publiczną redystrybucję. Dlatego projekt po otwarciu w Unity nie będzie miał tekstur.
 Repozytorium służy do pokazania kodu.
