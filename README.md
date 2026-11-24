@@ -13,7 +13,11 @@ Wrzucamy go jako ciekawostkę z przeszłości, a nie jako przykład dobrych prak
 
 
 
-Uploading gameplay.mp4…
+
+
+https://github.com/user-attachments/assets/6d8f120a-470c-436e-be1e-eb3fc379ea59
+
+
 
 
 
